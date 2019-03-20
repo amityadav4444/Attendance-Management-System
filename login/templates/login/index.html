@@ -1,0 +1,988 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V03</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/css/index.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<h4> <span class='glyphicon glyphicon-user'> </span> Hi {{user.username}}
+				<a href="{% url 'CP' %}">Change Password</a>
+				<a style='float:right; margin-bottom:10px' href='../logout' class='btn btn-primary'> <span class='glyphicon glyphicon-log-out'> </span>&nbsp &nbsp Log Out </a> </h4>
+				
+				<h2 style="text-align:center; color:#808080;">This week</h2>
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">1</th>
+								<th class="column100 column3" data-column="column3">2</th>
+								<th class="column100 column4" data-column="column4">3</th>
+								<th class="column100 column5" data-column="column5">4</th>
+								<th class="column100 column6" data-column="column6">5</th>
+								<th class="column100 column7" data-column="column7">6</th>
+								<th class="column100 column8" data-column="column8">7</th>
+								<th class="column100 column9" data-column="column9">8</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Monday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Monday1 %}
+									<div class="dropdown show">
+										<button class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday1}}
+										</button>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday1}}/01/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Monday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday2}}/02/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Monday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday3}}/03/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Monday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday4}}/04/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Monday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday5}}/05/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Monday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday6}}/06/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Monday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday7}}/07/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Monday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Monday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Monday8}}/08/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Tuesday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Tuesday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday1}}/11/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Tuesday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday2}}/12/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Tuesday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday3}}/13/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Tuesday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday4}}/14/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Tuesday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday5}}/15/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Tuesday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday6}}/16/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Tuesday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday7}}/17/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Tuesday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Tuesday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Tuesday8}}/18/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Tuesday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Wednesday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Wednesday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday1}}/21/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Wednesday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday2}}/22/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Wednesday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday3}}/23/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Wednesday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday4}}/24/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Wednesday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday5}}/25/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Wednesday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday6}}/26/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Wednesday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday7}}/27/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Wednesday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Wednesday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Wednesday8}}/28/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Wednesday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Thursday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Thursday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday1}}/31/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Thursday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday2}}/32/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Thursday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday3}}/33/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Thursday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday4}}/34/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Thursday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday5}}/35/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Thursday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday6}}/36/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Thursday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday7}}/37/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Thursday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday8}}/38/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Friday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Friday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday1}}/41/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Friday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday2}}/42/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Friday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday3}}/43/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Friday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday4}}/44/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Friday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday5}}/45/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Friday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday6}}/46/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Friday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday7}}/47/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Friday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday8}}/48/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br/> <br/>
+				<h2 style="text-align:center; color:#808080;">Previous week</h2>
+				
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">1</th>
+								<th class="column100 column3" data-column="column3">2</th>
+								<th class="column100 column4" data-column="column4">3</th>
+								<th class="column100 column5" data-column="column5">4</th>
+								<th class="column100 column6" data-column="column6">5</th>
+								<th class="column100 column7" data-column="column7">6</th>
+								<th class="column100 column8" data-column="column8">7</th>
+								<th class="column100 column9" data-column="column9">8</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Thursday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Thursday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday1}}/-41/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Thursday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday2}}/-42/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Thursday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday3}}/-43/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Thursday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday4}}/-44/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Thursday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday5}}/-45/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Thursday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday6}}/-46/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday6}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Thursday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday7}}/-47/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Thursday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Thursday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Thursday8}}/-48/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Thursday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Friday</td>
+								<td class="column100 column2" data-column="column2">
+								{% if data.Friday1 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday1}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday1}}/-31/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column3" data-column="column3">
+								{% if data.Friday2 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday2}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday2}}/-42/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday2}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column4" data-column="column4">
+								{% if data.Friday3 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday3}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday3}}/-33/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday3}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column5" data-column="column5">
+								{% if data.Friday4 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday4}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday4}}/-34/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday4}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column6" data-column="column6">
+								{% if data.Friday5 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday5}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday5}}/-35/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday5}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column7" data-column="column7">
+								{% if data.Friday6 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday6}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday6}}/-36/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Monday1}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column8" data-column="column8">
+								{% if data.Friday7 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday7}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday7}}/-37/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday7}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+								<td class="column100 column9" data-column="column9">
+								{% if data.Friday8 %}
+									<div class="dropdown show">
+										<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											{{data.Friday8}}
+										</a>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" href="../mark-attendance/{{data.Friday8}}/-38/">Mark Attendance</a>
+											<a class="dropdown-item" href="../analyze/{{data.Friday8}}">Analyze Attendance</a>
+											<a class="dropdown-item" href="#">Arrange Period</a>
+										</div>
+									</div>
+								{% endif %}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<br/> <br/>
+			
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='card'>
+							<div class='card-body' id='heading'>
+								Notifications
+							</div>
+						</div>
+					</div>
+					{% for i in holidays %}
+					<div class='col-sm-12 col-md-6'>
+						<div class='card'>
+							<div class='card-body'>
+								{{i.date}} {{i.description}}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static 'login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/js/main.js' %}"></script>
+	<script>
+		//alert('1');
+	</script>
+
+</body>
+</html>

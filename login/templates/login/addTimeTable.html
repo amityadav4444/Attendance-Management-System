@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V03</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'login/css/addTimeTable.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	<!--
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">-->
+			<form action='../addTimeTable/' method='post'>
+				{% csrf_token %}
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">1</th>
+								<th class="column100 column3" data-column="column3">2</th>
+								<th class="column100 column4" data-column="column4">3</th>
+								<th class="column100 column5" data-column="column5">4</th>
+								<th class="column100 column6" data-column="column6">5</th>
+								<th class="column100 column7" data-column="column7">6</th>
+								<th class="column100 column8" data-column="column8">7</th>
+								<th class="column100 column9" data-column="column9">8</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Monday</td>
+								<td class="column100 column3" data-column="column3">{{data.Monday1}}</td>
+								<td class="column100 column3" data-column="column3">{{data.Monday2}}</td>
+								<td class="column100 column4" data-column="column4">{{data.Monday3}}</td>
+								<td class="column100 column5" data-column="column5">{{data.Monday4}}</td>
+								<td class="column100 column6" data-column="column6">{{data.Monday5}}</td>
+								<td class="column100 column7" data-column="column7">{{data.Monday6}}</td>
+								<td class="column100 column8" data-column="column8">{{data.Monday7}}</td>
+								<td class="column100 column9" data-column="column9">{{data.Monday8}}</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Tuesday</td>
+								<td class="column100 column2" data-column="column2">{{data.Tuesday1}}</td>
+								<td class="column100 column3" data-column="column3">{{data.Tuesday2}}</td>
+								<td class="column100 column4" data-column="column4">{{data.Tuesday3}}</td>
+								<td class="column100 column5" data-column="column5">{{data.Tuesday4}}</td>
+								<td class="column100 column6" data-column="column6">{{data.Tuesday5}}</td>
+								<td class="column100 column7" data-column="column7">{{data.Tuesday6}}</td>
+								<td class="column100 column8" data-column="column8">{{data.Tuesday7}}</td>
+								<td class="column100 column9" data-column="column9">{{data.Tuesday8}}</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Wednesday</td>
+								<td class="column100 column2" data-column="column2">{{data.Wednesday1}}</td>
+								<td class="column100 column3" data-column="column3">{{data.Wednesday2}}</td>
+								<td class="column100 column4" data-column="column4">{{data.Wednesday3}}</td>
+								<td class="column100 column5" data-column="column5">{{data.Wednesday4}}</td>
+								<td class="column100 column6" data-column="column6">{{data.Wednesday5}}</td>
+								<td class="column100 column7" data-column="column7">{{data.Wednesday6}}</td>
+								<td class="column100 column8" data-column="column8">{{data.Wednesday7}}</td>
+								<td class="column100 column9" data-column="column9">{{data.Wednesday8}}</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Thursday</td>
+								<td class="column100 column2" data-column="column2">{{data.Thursday1}}</td>
+								<td class="column100 column3" data-column="column3">{{data.Thursday2}}</td>
+								<td class="column100 column4" data-column="column4">{{data.Thursday3}}</td>
+								<td class="column100 column5" data-column="column5">{{data.Thursday4}}</td>
+								<td class="column100 column6" data-column="column6">{{data.Thursday5}}</td>
+								<td class="column100 column7" data-column="column7">{{data.Thursday6}}</td>
+								<td class="column100 column8" data-column="column8">{{data.Thursday7}}</td>
+								<td class="column100 column9" data-column="column9">{{data.Thursday8}}</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Friday</td>
+								<td class="column100 column2" data-column="column2">{{data.Friday1}}</td>
+								<td class="column100 column3" data-column="column3">{{data.Friday2}}</td>
+								<td class="column100 column4" data-column="column4">{{data.Friday3}}</td>
+								<td class="column100 column5" data-column="column5">{{data.Friday4}}</td>
+								<td class="column100 column6" data-column="column6">{{data.Friday5}}</td>
+								<td class="column100 column7" data-column="column7">{{data.Friday6}}</td>
+								<td class="column100 column8" data-column="column8">{{data.Friday7}}</td>
+								<td class="column100 column9" data-column="column9">{{data.Friday8}}</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<input type='submit' value='submit'/>
+			</form>
+			<!--</div>
+		</div>
+	</div>-->
+	
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static 'login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'login/js/main.js' %}"></script>
+
+</body>
+</html>

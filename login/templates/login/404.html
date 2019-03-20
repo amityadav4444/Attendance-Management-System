@@ -1,0 +1,27 @@
+{% extends 'login/base.html' %}
+
+{% load static %}
+
+
+{% block title %} 
+	404 Page Not Found
+{% endblock %}
+
+{% block links %}
+	<!--<link rel='stylesheet' type='text/css' href="{% static 'login/css/404.css' %}">-->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.css'>
+{% endblock %}
+
+{% block content %}
+
+	<div class="error-page-wrap">
+		<article class="error-page gradient">
+			<hgroup>
+				<h1>404</h1>
+				<h2>oops! page not found</h2>
+			</hgroup>
+			<a href="../../" title="Back to site" class="error-back">back</a>
+		</article>
+	</div>
+	
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'login/base.html' %}
+
+{% load static %}
+{% load getattribute %}
+
+{% block title %} 
+	Analyze Attendance
+{% endblock %}
+
+{% block links %}
+	<link rel='stylesheet' type='text/css' href="{% static 'login/css/analyze.css' %}">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.css'>
+{% endblock %}
+
+{% block content %}
+
+<div class='jumbotron' id='jumbo'>
+	<div class='row'>
+		<div class='col-sm-6 col-md-2 col-lg-2'>
+			<img src="{% static 'login/images/adgitm_logo.jpg' %}" width='100px' height='100px'>
+		</div>
+		<div class='col-sm-12 col-md-8 col-lg-8'>
+			<h3> Dr. Akhilesh Das Gupta Institute of Technology & Management </h3>
+			<h5> Attendance Management System </h5>
+		</div>
+	</div>
+</div>
+	<h4 style='text-align:center; color: #808080;'> Attendance for {{stri}} </h4>
+	<div class='container-fluid' id='content'>
+		<div class='js-pscroll'>
+			<table class='table100'>
+				<thead>
+					<tr class="row100 head">
+						<th class=" column1">Roll No</th>
+						<th class=" column0">Name</th>
+						{% for i in list.0 %}
+							<th class=" column1">{{i.date}}</th>
+						{% endfor %}
+						<th class=" column1">Total</th>
+						<th class=" column1">Percentage</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for i in list %}
+							<tr class="row100 body">
+								<td class=" column1">{{i.0.student.rollno}}</td>
+								<td class=" column0">{{i.0.student.name}}</td>
+								{% for j in i %}
+									<td class=" column1">{{j.att}}</td>
+								{% endfor %}
+								<td class='column1'>
+									{{ total|index:forloop.counter0 }}
+								</td>
+								<td class='column1'>
+									{{ percentage|index:forloop.counter0 }}
+								</td>
+							</tr>
+					{% endfor %}
+				</tbody>
+		    </table>
+		</div>
+		<br/>
+		<a href='../summary/{{stri}}/' class='btn btn-primary'> Summary </a>
+	</div>
+	
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js'></script>
+
+<script>
+	$('.js-pscroll').each(function(){
+		var ps = new PerfectScrollbar(this);
+		$(window).on('resize', function(){
+			ps.update();
+		})
+	});
+
+</script>
+
+{% endblock %}
