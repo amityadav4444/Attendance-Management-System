@@ -3,3 +3,5 @@ It basically has two main modules for proper functioning.
 2. The second module is handled by the user which can be a faulty or an operator. The user has a right of making daily attendance, generating a report.
 
 3.hacktober fest
+
+4. name : dev pahuja
