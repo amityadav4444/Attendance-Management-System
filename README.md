@@ -4,4 +4,4 @@ It basically has two main modules for proper functioning.
 
 3.hacktober fest
 
-4. name : dev 
+4. name : dev pahuja
